@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+
+  
+}
+.title{
+  font-family: Fantasy;
+  font-weight: 100;
+  color: #EBFFFB;
+  display: inline-block;
+  position: absolute;
+  top:300px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.filler{
+  color: #EBFFFB;
+  display: inline-block;
+  position: absolute;
+  width:30%;
+  text-align: left;
+  top:469px
+}
+.bgimg{
+  background-image: url("/static/images/homebackground.jpg");
+  background-size: contain;
+  padding: 510px 400px;
+  background-repeat: no-repeat;
+}

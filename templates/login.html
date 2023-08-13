@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/loginstyle.css">
+    <!--<link rel="stylesheet" href="boxicons-master/css/boxicons.css">-->
+
+    <title>Login Page</title>
+
+</head>
+<body>
+    <form action = "{{url_for('Login_Process')}}" method = "POST">
+
+   <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <!-- <span>Have an account?</span> -->
+            <header>Login</header>
+        </div>
+
+        <div class="input-field">
+            <input type="username" class="input" placeholder="Username" name ="username"id="">
+            <i class='bx bx-user' ></i>
+        </div>
+
+        <div class="input-field">
+            <input type="password" class="input" placeholder="Password" name ="password"id="">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+        <div class="input-field">
+            <input type="submit" class="submit" value="Login" id="">
+        </div>
+
+        <!-- <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check">Don't have an account?</label>
+            </div>
+            <div class="two">
+                <label><a href="#">Sign up</a></label>
+            </div>
+        </div> -->
+    </div>
+</div> 
+</form> 
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin page</title>
+</head>
+<body>
+  <h1>Admin Login</h1>
+  <br>
+  <ul style="list-style-type:square;">
+    <a href="{{url_for('RenderAddproduct')}}"><li>Add Product</li></a>
+    <br>
+    <a href="{{url_for('RenderUpdateQuantity')}}"><li>Update Product</li></a>    <br>
+    <a href="{{url_for('RenderDelProduct')}}"><li>Delete Product</li></a>  <br>
+    <a href="{{url_for('rendersales')}}"><li>cart details</li></a>  </ul>
+</body>
+</html>

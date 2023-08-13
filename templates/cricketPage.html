@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .img1{
+        display: inline-block;
+        position: absolute;
+        right:900px;
+      }
+      .img2{
+        display: inline-block;
+        position: absolute;
+        right: 500px;
+      }
+      .btn1{
+        display: inline-block;
+        position: absolute;
+        left: 1350px;
+        top:20px;
+      }
+    </style>
+</head>
+<body>
+    <h1>Products Available</h1>
+    <br>
+        <div class="btn1"><a href="{{url_for('RenderHome')}}"><button>Go home</button></a></div>
+        <div class="d-grid gap-2 d-md-block">
+          <div class="img1">
+            <p>Bat</p>
+            <img src="/static/images/bat.png" alt="">
+            <h4>Rs:{{Pid_name.0.2}}</h4>
+          <!-- <input type="number"> -->
+          <br><br>
+          <form action="{{url_for('AddTocart')}}" method="POST">
+            <input type="number"  name="quantity" min="1" max="5">
+            <input type="hidden" name="pid" value="{{Pid_name.0.0}}">
+            <input class="btn btn-primary" type="submit" value ="AddTocart"> 
+            </form>  
+            <form action="{{url_for('cart_rem')}}" method="POST">
+            <input type="hidden" name ="removeid" value="{{Pid_name.0.0}}" >
+            <input class="btn btn-primary" type="submit" value="Remove"> 
+            </form>
+          </div>
+          <div class="img2">
+            <p>Ball</p>
+            <img src="/static/images/ball.png" alt="">
+            <h4>Rs:{{Pid_name.1.2}}</h4>
+          <!-- <input type="number"> -->
+          <br><br>
+          <form action="{{url_for('AddTocart')}}" method="POST">
+          <input type="number"  name="quantity" min="1" max="5">
+          <input type="hidden" name="pid" value="{{Pid_name.1.0}}">
+          <input class="btn btn-primary" type="submit"value ="Addtocart" > 
+          </form> 
+          <form action="{{url_for('cart_rem')}}" method="POST">
+          <input type="hidden" name ="removeid" value="{{Pid_name.1.0}}" >
+          <input class="btn btn-primary" type="submit" value="Remove" > 
+          </form>
+          </div>   
+        </div>
+      
+
+</body>
+</html>

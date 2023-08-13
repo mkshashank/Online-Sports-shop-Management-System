@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+</head>
+<body>
+  
+    <h1>Product details</h1>
+  <form action="{{url_for('AddProduct')}}" method = "POST">
+    <div class="d-grid gap-2 d-md-block">
+      <p>product name</p>
+      <input type="text" name="pname" id="prdct" placeholder="Enter product">
+      <p>product id</p>
+      <input type="text" name="prod_id" id="prdct" placeholder="Enter id">
+      <p>product type</p>
+      <input type="text" name="ptype" id="prdct" placeholder="Enter product type">
+      <p>Quantity</p>
+      <input type="text" name="Quantity" id="prdct" placeholder="Enter quantity">
+      <p>Product price</p>
+      <input type="text" name="price" id="prdct" placeholder="Enter product price">
+      <input class="btn btn-primary" type="submit" value="Submit">    
+      
+    </div>
+  </form>
+ 
+</body>
+</html>

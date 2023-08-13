@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart items </title>
+    <style>
+     .btn1{
+        display: inline-block;
+        position: absolute;
+        left: 1300px;
+        top:20px;
+      }
+    </style>
+</head>
+<body>
+    <div class="btn1"><a href="{{url_for('RenderHome')}}"><button>Go home</button></a></div>
+    <table style="width: 700px; margin-left: auto; margin-right: auto;" class="table table-striped">
+        {% if cartitems %}
+        <thead>
+            <tr>
+                <th> product id</th>
+                <th> PRODUCT NAME </th>
+                <th> QUANTITY   </th>
+                <th> COST </th>
+                
+            </tr>
+        </thead>
+        {% endif %}
+        <tbody>
+            {% set c = namespace(items=1) %}
+            {% for i in cartitems %}
+                <form action = "{{url_for('cart_rem')}}" method = "POST">
+                <tr>
+                    <td>{{c.items}}</td>
+                    <td>{{i[0]}}</td>
+                    <td style="text-align: left;">{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td> <input style="width: 80px;text-align: center;" type="text" title="marks" name = "userMarks" value="{{i[3]}}"/></td>
+                    <td> <button style="width: 80px;" class="btn btn-primary" type="submit">Delete</button> </td>
+                    <input type = "hidden" name = "userUSN" value = "{{i[0]}}">
+                    <input type = "hidden" name = "usermks" value = "{{c.items}}">
+                </tr>
+                {% set c.items = c.items + 1 %}
+            </form>
+            {% endfor %}  
+        </tbody>
+    </table>
+</body>
+</html>
